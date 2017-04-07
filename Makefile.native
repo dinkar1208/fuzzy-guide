@@ -1,0 +1,43 @@
+CC := gcc
+RM := rm
+
+
+SRCDIR :=.
+OBJDIR :=.
+LIBDIR :=
+INCDIR :=-I.
+
+SRC    := $(wildcard *.c)
+HDR    := $(wildcard *.h)
+
+OBJ    := $(SRC:%.c=%.o)
+LIB    :=
+BIN    := ffos.native
+DEPEND := depend
+
+OPT     := -O2
+CFLAGS  := -std=c99 -Wall -fopenmp $(OPT) $(INCDIR)
+LDFLAGS := -fopenmp $(OPT) -static
+
+all: $(BIN)
+
+$(BIN): $(DEPEND) $(OBJ) 
+	$(CC) $(CFLAGS) $(LDFLAGS) -o $(BIN) $(OBJ) 
+
+$(DEPEND): $(SRC) $(HDR)
+	@echo 'checking dependencies'
+	@$(SHELL) -ec '$(CC) -MM $(INCDIR) $(SRC)>$(DEPEND)'
+	@echo
+
+
+.PHONY: all clean cleanobj run
+
+cleanobj:
+	-$(RM) -f $(OBJDIR)/*.o
+	-$(RM) -f $(DEPEND)
+
+clean: cleanobj
+	-$(RM) -f $(BIN)
+	-$(RM) -f output.pgm binary.pgm erosion.pgm
+
+-include $(DEPEND)
