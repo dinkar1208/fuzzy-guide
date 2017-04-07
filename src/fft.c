@@ -31,12 +31,23 @@ void fft_rec(int N, int offset, int delta,
   int k00, k01, k10, k11;  /* indices for butterflies */
   float tmp0, tmp1;       /* temporary storage */
   //printf("%d\n",N);
+
   if(N != 2)  /* Perform recursive step. */
     {
-      /* Calculate two (N/2)-point DFT's. */
-      fft_rec(N2, offset, 2*delta, x, XX, X);
-      fft_rec(N2, offset+delta, 2*delta, x, XX, X);
+	#pragma omp parallel num_threads(2)
+	{
 
+      	/* Calculate two (N/2)-point DFT's. */
+	if(omp_get_thread_num() == 0){
+      	fft_rec(N2, offset, 2*delta, x, XX, X);
+	}
+	if(omp_get_thread_num() ==1){
+      	fft_rec(N2, offset+delta, 2*delta, x, XX, X);
+	}
+	if(omp_get_thread_num() > 1){
+	printf("Error");
+	}
+	}
       /* Combine the two (N/2)-point DFT's into one N-point DFT. */
       for(k=0; k<N2; k++)
         {
