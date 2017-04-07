@@ -30,7 +30,7 @@ void fft_rec(int N, int offset, int delta,
   float cs, sn;           /* cosine and sine */
   int k00, k01, k10, k11;  /* indices for butterflies */
   float tmp0, tmp1;       /* temporary storage */
-
+  printf("%d\n",N);
   if(N != 2)  /* Perform recursive step. */
     {
       /* Calculate two (N/2)-point DFT's. */
@@ -40,7 +40,7 @@ void fft_rec(int N, int offset, int delta,
       /* Combine the two (N/2)-point DFT's into one N-point DFT. */
       for(k=0; k<N2; k++)
         {
-          printf("k00 = %d, k01 = %d, k10 = %d, k10 = %d \n\r",k00,k01,k10,k11);//DINU
+          //printf("k00 = %d, k01 = %d, k10 = %d, k10 = %d \n\r",k00,k01,k10,k11);//DINU
           k00 = offset + k*delta;    k01 = k00 + N2*delta;
           k10 = offset + 2*k*delta;  k11 = k10 + delta;
           cs = cos(TWO_PI*k/(float)N); sn = sin(TWO_PI*k/(float)N);
