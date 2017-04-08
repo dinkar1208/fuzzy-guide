@@ -1,2 +1,2 @@
-0          [ 4243]  [ 1]  [interval_timer.cc   : 208]  *WARNING* Significant fraction of x87 instructions encountered, accuracy will be low. Compile without -mno-sse2 -mno-sse3 to avoid these instructions.
-230        [ 4243]  [ 1]  [interval_timer.cc   : 208]  *WARNING* Future warnings of this type will be suppressed.
+0          [ 6393]  [ 1]  [interval_timer.cc   : 208]  *WARNING* Significant fraction of x87 instructions encountered, accuracy will be low. Compile without -mno-sse2 -mno-sse3 to avoid these instructions.
+215        [ 6393]  [ 1]  [interval_timer.cc   : 208]  *WARNING* Future warnings of this type will be suppressed.

@@ -29,9 +29,9 @@
 		<param name="virtual_address_width" value="64"/>
 		<param name="physical_address_width" value="52"/>
 		<param name="virtual_memory_page_size" value="4096"/>
-		<stat name="total_cycles" value="121450433"/>
+		<stat name="total_cycles" value="120924475"/>
 		<stat name="idle_cycles" value="0"/>
-		<stat name="busy_cycles"  value="121450433"/>
+		<stat name="busy_cycles"  value="120924475"/>
 			<!--This page size(B) is complete different from the page size in Main memo secction. this page size is the size of 
 			virtual memory from OS/Archi perspective; the page size in Main memo secction is the actuall physical line in a DRAM bank  -->
 		<!-- *********************** cores ******************* -->
@@ -121,53 +121,53 @@
 			<param name="RAS_size" value="64"/>
 			<!-- general stats, defines simulation periods;require total, idle, and busy cycles for senity check  -->
 			<!-- please note: if target architecture is X86, then all the instrucions refer to (fused) micro-ops -->
-			<stat name="total_instructions" value="181678442"/>
-			<stat name="int_instructions" value="151892410"/>
+			<stat name="total_instructions" value="181706588"/>
+			<stat name="int_instructions" value="151915382"/>
 			<stat name="fp_instructions" value="8247322"/>
-			<stat name="branch_instructions" value="21538710"/>
-			<stat name="branch_mispredictions" value="54979"/>
-			<stat name="load_instructions" value="67150637"/>
+			<stat name="branch_instructions" value="21543884"/>
+			<stat name="branch_mispredictions" value="55111"/>
+			<stat name="load_instructions" value="67155859"/>
 			<stat name="store_instructions" value="25779165"/>
-			<stat name="committed_instructions" value="181678442"/>
-			<stat name="committed_int_instructions" value="151892410"/>
+			<stat name="committed_instructions" value="181706588"/>
+			<stat name="committed_int_instructions" value="151915382"/>
 			<stat name="committed_fp_instructions" value="8247322"/>
-			<stat name="total_cycles" value="121450433"/>
+			<stat name="total_cycles" value="120924475"/>
 			<stat name="idle_cycles" value="0"/>
-			<stat name="busy_cycles"  value="121450433"/>
+			<stat name="busy_cycles"  value="120924475"/>
 			<!-- instruction buffer stats -->
 			<!-- ROB stats, both RS and Phy based OoOs have ROB
 			performance simulator should capture the difference on accesses,
 			otherwise, McPAT has to guess based on number of commited instructions. -->
-			<stat name="ROB_reads" value="181678442"/>
-			<stat name="ROB_writes" value="181678442"/>
+			<stat name="ROB_reads" value="181706588"/>
+			<stat name="ROB_writes" value="181706588"/>
 			<!-- RAT accesses -->
-			<stat name="rename_reads" value="363356884"/>
-			<stat name="rename_writes" value="181678442"/>
+			<stat name="rename_reads" value="363413176"/>
+			<stat name="rename_writes" value="181706588"/>
 			<stat name="fp_rename_reads" value="16494644"/>
 			<stat name="fp_rename_writes" value="8247322"/>
 			<!-- decode and rename stage use this, should be total ic - nop -->
 			<!-- Inst window stats -->
-			<stat name="inst_window_reads" value="181678442"/>
-			<stat name="inst_window_writes" value="181678442"/>
-			<stat name="inst_window_wakeup_accesses" value="363356884"/>
-			<stat name="fp_inst_window_reads" value="90839221"/>
-			<stat name="fp_inst_window_writes" value="90839221"/>
-			<stat name="fp_inst_window_wakeup_accesses" value="181678442"/>
+			<stat name="inst_window_reads" value="181706588"/>
+			<stat name="inst_window_writes" value="181706588"/>
+			<stat name="inst_window_wakeup_accesses" value="363413176"/>
+			<stat name="fp_inst_window_reads" value="90853294"/>
+			<stat name="fp_inst_window_writes" value="90853294"/>
+			<stat name="fp_inst_window_wakeup_accesses" value="181706588"/>
 			<!--  RF accesses -->
-			<stat name="int_regfile_reads" value="272517663"/>
-			<stat name="float_regfile_reads" value="45419610"/>
-			<stat name="int_regfile_writes" value="136258831"/>
-			<stat name="float_regfile_writes" value="22709805"/>
+			<stat name="int_regfile_reads" value="272559882"/>
+			<stat name="float_regfile_reads" value="45426647"/>
+			<stat name="int_regfile_writes" value="136279941"/>
+			<stat name="float_regfile_writes" value="22713323"/>
 			<!-- accesses to the working reg -->
-			<stat name="function_calls" value="9083922"/>
+			<stat name="function_calls" value="9085329"/>
 			<stat name="context_switches" value="0"/>
 			<!-- Number of Windowes switches (number of function calls and returns)-->
 			<!-- Alu stats by default, the processor has one FPU that includes the divider and 
 			 multiplier. The fpu accesses should include accesses to multiplier and divider  -->
-			<stat name="ialu_access" value="199448056"/>
+			<stat name="ialu_access" value="199473542"/>
 			<stat name="fpu_access" value="8247322"/>
 			<stat name="mul_accesses" value="4466375"/>
-			<stat name="cdb_alu_accesses" value="199448056"/>
+			<stat name="cdb_alu_accesses" value="199473542"/>
 			<stat name="cdb_mul_accesses" value="4466375"/>
 			<stat name="cdb_fpu_accesses" value="8247322"/>
 			<!-- multiple cycle accesses should be counted multiple times, 
@@ -181,15 +181,15 @@
 			based on param and stats of last level cache
 			The same rule applies to all cache access stats too!  -->
 			<stat name="IFU_duty_cycle" value="1.000000"/>
-			<stat name="LSU_duty_cycle" value="0.765166"/>
+			<stat name="LSU_duty_cycle" value="0.768538"/>
 			<stat name="MemManU_I_duty_cycle" value="1.000000"/>
-			<stat name="MemManU_D_duty_cycle" value="0.765166"/>
-			<stat name="ALU_duty_cycle" value="0.476000"/>
-			<stat name="MUL_duty_cycle" value="0.036775"/>
-			<stat name="FPU_duty_cycle" value="0.067907"/>
-			<stat name="ALU_cdb_duty_cycle" value="0.476000"/>
-			<stat name="MUL_cdb_duty_cycle" value="0.036775"/>
-			<stat name="FPU_cdb_duty_cycle" value="0.067907"/>
+			<stat name="MemManU_D_duty_cycle" value="0.768538"/>
+			<stat name="ALU_duty_cycle" value="0.478148"/>
+			<stat name="MUL_duty_cycle" value="0.036935"/>
+			<stat name="FPU_duty_cycle" value="0.068202"/>
+			<stat name="ALU_cdb_duty_cycle" value="0.478148"/>
+			<stat name="MUL_cdb_duty_cycle" value="0.036935"/>
+			<stat name="FPU_cdb_duty_cycle" value="0.068202"/>
 			<param name="number_of_BPT" value="2"/>
 			<component id="system.core0.predictor" name="PBT">
 				<!-- branch predictor; tournament predictor see Alpha implementation -->
@@ -202,8 +202,8 @@
 			</component>
 			<component id="system.core0.itlb" name="itlb">
 				<param name="number_entries" value="128"/>
-				<stat name="total_accesses" value="18871418"/>
-				<stat name="total_misses" value="226163"/>
+				<stat name="total_accesses" value="18871442"/>
+				<stat name="total_misses" value="173239"/>
 				<stat name="conflicts" value="0"/>
 				<!-- there is no write requests to itlb although writes happen to itlb after miss,
 				which is actually a replacement -->
@@ -211,35 +211,35 @@
 			<component id="system.core0.icache" name="icache">
 				<!-- there is no write requests to itlb although writes happen to it after miss, 
 				which is actually a replacement -->
-				<param name="icache_config" value="8192,64,2,1,1,4, 0, 1"/>
+				<param name="icache_config" value="8192,64,4,1,1,4, 0, 1"/>
 				<!-- the parameters are capacity,block_width, associativity,bank, throughput w.r.t. core clock, latency w.r.t. core clock,-->
 				<param name="buffer_sizes" value="16, 16, 16, 0"/>
 				<!-- cache controller buffer sizes: miss_buffer_size(MSHR),fill_buffer_size,prefetch_buffer_size,wb_buffer_size-->
-				<stat name="read_accesses" value="18871418"/>
+				<stat name="read_accesses" value="18871442"/>
 				<stat name="read_misses" value="0"/>
 				<stat name="conflicts" value="0"/>
 			</component>
 			<component id="system.core0.dtlb" name="dtlb">
 				<param name="number_entries" value="256"/>
-				<stat name="total_accesses" value="92929802"/>
-				<stat name="total_misses" value="1431524"/>
+				<stat name="total_accesses" value="92935024"/>
+				<stat name="total_misses" value="754789"/>
 				<stat name="conflicts" value="0"/>
 			</component>
 			<component id="system.core0.dcache" name="dcache">
 				<!-- all the buffer related are optional -->
-				<param name="dcache_config" value="8192,64,2,2,10,40, 0, 1"/>
+				<param name="dcache_config" value="8192,64,4,2,10,40, 0, 1"/>
 				<param name="buffer_sizes" value="16, 16, 16, 16"/>
 				<!-- cache controller buffer sizes: miss_buffer_size(MSHR),fill_buffer_size,prefetch_buffer_size,wb_buffer_size-->
-				<stat name="read_accesses" value="67150637"/>
+				<stat name="read_accesses" value="67155859"/>
 				<stat name="write_accesses" value="25779165"/>
-				<stat name="read_misses" value="804036"/>
-				<stat name="write_misses" value="627488"/>
+				<stat name="read_misses" value="353579"/>
+				<stat name="write_misses" value="401210"/>
 				<stat name="conflicts" value="0"/>
 			</component>
 			<component id="system.core0.BTB" name="BTB">
 				<!-- all the buffer related are optional -->
 				<param name="BTB_config" value="18944,8,4,1, 1,3"/>
-				<stat name="read_accesses" value="21538710"/>
+				<stat name="read_accesses" value="21543884"/>
 				<stat name="write_accesses" value="0"/>
 				<!-- the parameters are capacity,block_width,associativity,bank, throughput w.r.t. core clock, latency w.r.t. core clock,-->
 			</component>
@@ -331,53 +331,53 @@
 			<param name="RAS_size" value="64"/>
 			<!-- general stats, defines simulation periods;require total, idle, and busy cycles for senity check  -->
 			<!-- please note: if target architecture is X86, then all the instrucions refer to (fused) micro-ops -->
-			<stat name="total_instructions" value="27301210"/>
-			<stat name="int_instructions" value="23343419"/>
+			<stat name="total_instructions" value="27264508"/>
+			<stat name="int_instructions" value="23313425"/>
 			<stat name="fp_instructions" value="1600176"/>
-			<stat name="branch_instructions" value="2357615"/>
-			<stat name="branch_mispredictions" value="12656"/>
-			<stat name="load_instructions" value="12645409"/>
+			<stat name="branch_instructions" value="2350907"/>
+			<stat name="branch_mispredictions" value="12535"/>
+			<stat name="load_instructions" value="12638629"/>
 			<stat name="store_instructions" value="4704046"/>
-			<stat name="committed_instructions" value="27301210"/>
-			<stat name="committed_int_instructions" value="23343419"/>
+			<stat name="committed_instructions" value="27264508"/>
+			<stat name="committed_int_instructions" value="23313425"/>
 			<stat name="committed_fp_instructions" value="1600176"/>
-			<stat name="total_cycles" value="121199472"/>
-			<stat name="idle_cycles" value="250847"/>
-			<stat name="busy_cycles"  value="120948625"/>
+			<stat name="total_cycles" value="120673609"/>
+			<stat name="idle_cycles" value="250630"/>
+			<stat name="busy_cycles"  value="120422978"/>
 			<!-- instruction buffer stats -->
 			<!-- ROB stats, both RS and Phy based OoOs have ROB
 			performance simulator should capture the difference on accesses,
 			otherwise, McPAT has to guess based on number of commited instructions. -->
-			<stat name="ROB_reads" value="27301210"/>
-			<stat name="ROB_writes" value="27301210"/>
+			<stat name="ROB_reads" value="27264508"/>
+			<stat name="ROB_writes" value="27264508"/>
 			<!-- RAT accesses -->
-			<stat name="rename_reads" value="54602420"/>
-			<stat name="rename_writes" value="27301210"/>
+			<stat name="rename_reads" value="54529016"/>
+			<stat name="rename_writes" value="27264508"/>
 			<stat name="fp_rename_reads" value="3200352"/>
 			<stat name="fp_rename_writes" value="1600176"/>
 			<!-- decode and rename stage use this, should be total ic - nop -->
 			<!-- Inst window stats -->
-			<stat name="inst_window_reads" value="27301210"/>
-			<stat name="inst_window_writes" value="27301210"/>
-			<stat name="inst_window_wakeup_accesses" value="54602420"/>
-			<stat name="fp_inst_window_reads" value="13650605"/>
-			<stat name="fp_inst_window_writes" value="13650605"/>
-			<stat name="fp_inst_window_wakeup_accesses" value="27301210"/>
+			<stat name="inst_window_reads" value="27264508"/>
+			<stat name="inst_window_writes" value="27264508"/>
+			<stat name="inst_window_wakeup_accesses" value="54529016"/>
+			<stat name="fp_inst_window_reads" value="13632254"/>
+			<stat name="fp_inst_window_writes" value="13632254"/>
+			<stat name="fp_inst_window_wakeup_accesses" value="27264508"/>
 			<!--  RF accesses -->
-			<stat name="int_regfile_reads" value="40951815"/>
-			<stat name="float_regfile_reads" value="6825302"/>
-			<stat name="int_regfile_writes" value="20475907"/>
-			<stat name="float_regfile_writes" value="3412651"/>
+			<stat name="int_regfile_reads" value="40896762"/>
+			<stat name="float_regfile_reads" value="6816127"/>
+			<stat name="int_regfile_writes" value="20448381"/>
+			<stat name="float_regfile_writes" value="3408063"/>
 			<!-- accesses to the working reg -->
-			<stat name="function_calls" value="1365060"/>
+			<stat name="function_calls" value="1363225"/>
 			<stat name="context_switches" value="0"/>
 			<!-- Number of Windowes switches (number of function calls and returns)-->
 			<!-- Alu stats by default, the processor has one FPU that includes the divider and 
 			 multiplier. The fpu accesses should include accesses to multiplier and divider  -->
-			<stat name="ialu_access" value="31415271"/>
+			<stat name="ialu_access" value="31382019"/>
 			<stat name="fpu_access" value="1600176"/>
 			<stat name="mul_accesses" value="639064"/>
-			<stat name="cdb_alu_accesses" value="31415271"/>
+			<stat name="cdb_alu_accesses" value="31382019"/>
 			<stat name="cdb_mul_accesses" value="639064"/>
 			<stat name="cdb_fpu_accesses" value="1600176"/>
 			<!-- multiple cycle accesses should be counted multiple times, 
@@ -390,16 +390,16 @@
 			Future versions of McPAT may be able to reason the implicite access
 			based on param and stats of last level cache
 			The same rule applies to all cache access stats too!  -->
-			<stat name="IFU_duty_cycle" value="0.224793"/>
-			<stat name="LSU_duty_cycle" value="0.142852"/>
-			<stat name="MemManU_I_duty_cycle" value="0.224793"/>
-			<stat name="MemManU_D_duty_cycle" value="0.142852"/>
-			<stat name="ALU_duty_cycle" value="0.070539"/>
-			<stat name="MUL_duty_cycle" value="0.005262"/>
-			<stat name="FPU_duty_cycle" value="0.013176"/>
-			<stat name="ALU_cdb_duty_cycle" value="0.070539"/>
-			<stat name="MUL_cdb_duty_cycle" value="0.005262"/>
-			<stat name="FPU_cdb_duty_cycle" value="0.013176"/>
+			<stat name="IFU_duty_cycle" value="0.225467"/>
+			<stat name="LSU_duty_cycle" value="0.143417"/>
+			<stat name="MemManU_I_duty_cycle" value="0.225467"/>
+			<stat name="MemManU_D_duty_cycle" value="0.143417"/>
+			<stat name="ALU_duty_cycle" value="0.070745"/>
+			<stat name="MUL_duty_cycle" value="0.005285"/>
+			<stat name="FPU_duty_cycle" value="0.013233"/>
+			<stat name="ALU_cdb_duty_cycle" value="0.070745"/>
+			<stat name="MUL_cdb_duty_cycle" value="0.005285"/>
+			<stat name="FPU_cdb_duty_cycle" value="0.013233"/>
 			<param name="number_of_BPT" value="2"/>
 			<component id="system.core1.predictor" name="PBT">
 				<!-- branch predictor; tournament predictor see Alpha implementation -->
@@ -412,8 +412,8 @@
 			</component>
 			<component id="system.core1.itlb" name="itlb">
 				<param name="number_entries" value="128"/>
-				<stat name="total_accesses" value="2347488"/>
-				<stat name="total_misses" value="79973"/>
+				<stat name="total_accesses" value="2347464"/>
+				<stat name="total_misses" value="27741"/>
 				<stat name="conflicts" value="0"/>
 				<!-- there is no write requests to itlb although writes happen to itlb after miss,
 				which is actually a replacement -->
@@ -421,35 +421,35 @@
 			<component id="system.core1.icache" name="icache">
 				<!-- there is no write requests to itlb although writes happen to it after miss, 
 				which is actually a replacement -->
-				<param name="icache_config" value="8192,64,2,1,1,4, 0, 1"/>
+				<param name="icache_config" value="8192,64,4,1,1,4, 0, 1"/>
 				<!-- the parameters are capacity,block_width, associativity,bank, throughput w.r.t. core clock, latency w.r.t. core clock,-->
 				<param name="buffer_sizes" value="16, 16, 16, 0"/>
 				<!-- cache controller buffer sizes: miss_buffer_size(MSHR),fill_buffer_size,prefetch_buffer_size,wb_buffer_size-->
-				<stat name="read_accesses" value="2347488"/>
+				<stat name="read_accesses" value="2347464"/>
 				<stat name="read_misses" value="0"/>
 				<stat name="conflicts" value="0"/>
 			</component>
 			<component id="system.core1.dtlb" name="dtlb">
 				<param name="number_entries" value="256"/>
-				<stat name="total_accesses" value="17349455"/>
-				<stat name="total_misses" value="380776"/>
+				<stat name="total_accesses" value="17342675"/>
+				<stat name="total_misses" value="377077"/>
 				<stat name="conflicts" value="0"/>
 			</component>
 			<component id="system.core1.dcache" name="dcache">
 				<!-- all the buffer related are optional -->
-				<param name="dcache_config" value="8192,64,2,2,10,40, 0, 1"/>
+				<param name="dcache_config" value="8192,64,4,2,10,40, 0, 1"/>
 				<param name="buffer_sizes" value="16, 16, 16, 16"/>
 				<!-- cache controller buffer sizes: miss_buffer_size(MSHR),fill_buffer_size,prefetch_buffer_size,wb_buffer_size-->
-				<stat name="read_accesses" value="12645409"/>
+				<stat name="read_accesses" value="12638629"/>
 				<stat name="write_accesses" value="4704046"/>
-				<stat name="read_misses" value="155895"/>
-				<stat name="write_misses" value="224881"/>
+				<stat name="read_misses" value="152427"/>
+				<stat name="write_misses" value="224650"/>
 				<stat name="conflicts" value="0"/>
 			</component>
 			<component id="system.core1.BTB" name="BTB">
 				<!-- all the buffer related are optional -->
 				<param name="BTB_config" value="18944,8,4,1, 1,3"/>
-				<stat name="read_accesses" value="2357615"/>
+				<stat name="read_accesses" value="2350907"/>
 				<stat name="write_accesses" value="0"/>
 				<!-- the parameters are capacity,block_width,associativity,bank, throughput w.r.t. core clock, latency w.r.t. core clock,-->
 			</component>
@@ -462,12 +462,12 @@
 				<param name="vdd" value="1.200000"/><!-- 0 means using ITRS default vdd -->
 				<param name="ports" value="1,1,1"/>
 				<param name="device_type" value="0"/>
-				<stat name="read_accesses" value="1030199"/>
-				<stat name="write_accesses" value="627488"/>
-				<stat name="read_misses" value="97778"/>
-				<stat name="write_misses" value="168717"/>
+				<stat name="read_accesses" value="526818"/>
+				<stat name="write_accesses" value="401210"/>
+				<stat name="read_misses" value="95571"/>
+				<stat name="write_misses" value="161240"/>
 				<stat name="conflicts" value="0"/>
-				<stat name="duty_cycle" value="0.013649"/>
+				<stat name="duty_cycle" value="0.007674"/>
 		</component>
 		<component id="system.L21" name="L21">
 				<param name="L2_config" value="131072,64,4,8,1,8, 0, 1"/>
@@ -476,12 +476,12 @@
 				<param name="vdd" value="1.200000"/><!-- 0 means using ITRS default vdd -->
 				<param name="ports" value="1,1,1"/>
 				<param name="device_type" value="0"/>
-				<stat name="read_accesses" value="235868"/>
-				<stat name="write_accesses" value="224881"/>
-				<stat name="read_misses" value="93041"/>
-				<stat name="write_misses" value="143371"/>
+				<stat name="read_accesses" value="180168"/>
+				<stat name="write_accesses" value="224650"/>
+				<stat name="read_misses" value="92194"/>
+				<stat name="write_misses" value="144524"/>
 				<stat name="conflicts" value="0"/>
-				<stat name="duty_cycle" value="0.003794"/>
+				<stat name="duty_cycle" value="0.003348"/>
 		</component>
 		<component id="system.L30" name="L30">
 				<param name="L3_config" value="1048576,64,2, 16, 16, 30,1"/>
@@ -492,12 +492,12 @@
 				<param name="device_type" value="0"/>
 				<param name="buffer_sizes" value="16, 16, 16, 16"/>
 				<!-- cache controller buffer sizes: miss_buffer_size(MSHR),fill_buffer_size,prefetch_buffer_size,wb_buffer_size-->
-				<stat name="read_accesses" value="190819"/>
-				<stat name="write_accesses" value="308690"/>
-				<stat name="read_misses" value="393"/>
-				<stat name="write_misses" value="1683"/>
+				<stat name="read_accesses" value="187765"/>
+				<stat name="write_accesses" value="305764"/>
+				<stat name="read_misses" value="730"/>
+				<stat name="write_misses" value="2081"/>
 				<stat name="conflicts" value="0"/>
-				<stat name="duty_cycle" value="0.004113"/>
+				<stat name="duty_cycle" value="0.004081"/>
 		</component>
 			<!--**********************************************************************-->
 		<component id="system.NoC0" name="noc0">
@@ -536,9 +536,9 @@
 			<param name="databus_width" value="128"/>
 			<param name="addressbus_width" value="51"/>
 			<!-- McPAT will add the control bus width to the addressbus width automatically -->
-			<stat name="memory_accesses" value="4037"/>
-			<stat name="memory_reads" value="2021"/>
-			<stat name="memory_writes" value="2016"/>
+			<stat name="memory_accesses" value="5039"/>
+			<stat name="memory_reads" value="2626"/>
+			<stat name="memory_writes" value="2413"/>
 			<!-- McPAT does not track individual mc, instead, it takes the total accesses and calculate 
 			the average power per MC or per channel. This is sufficent for most application. 
 			Further trackdown can be easily added in later versions. -->
